@@ -1,0 +1,23 @@
+.root {
+  -fx-font-size: 14px;
+  -fx-font-family: sans-serif;
+  -fx-background-color: #527648;
+}
+
+.content-section {
+  -fx-padding: 10 20 10 20;
+  -fx-wrap-text: true;
+
+}
+
+#content {
+  -fx-wrap-text: true;
+  -fx-font-size: 16px;
+}
+
+#footer-section {
+  -fx-alignment: center;
+  -fx-padding: 10 10 10 10;
+  -fx-border-width: 1;
+  -fx-border-color: #E8E8E8 transparent transparent transparent;
+}

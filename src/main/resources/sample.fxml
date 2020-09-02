@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  prefHeight="275.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" stylesheets="@Steel.css">
+  <top>
+    <VBox styleClass="sidebar-section">
+      <children>
+        <TabPane>
+          <Tab fx:id="productLine" text="Product Line">
+            <!--<fx:include source="ProductLine.fxml"/>-->
+          </Tab>
+          <Tab fx:id="produce" text="Produce">
+            <!--<fx:include source="Produce.fxml"/>-->
+          </Tab>
+          <Tab fx:id="productionLog" text="Production Log">
+            <!--<fx:include source="ProductionLog.fxml"/>-->
+          </Tab>
+        </TabPane>
+      </children>
+    </VBox>
+  </top>
+  <left>
+  </left>
+  <center>
+    <VBox styleClass="content-section">
+      <children>
+        <Label id="content-header" text="Content header"></Label>
+        <Label id="content">
+          <text>
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s with
+            the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software
+            like Aldus PageMaker including versions of Lorem Ipsum.
+          </text>
+        </Label>
+      </children>
+    </VBox>
+  </center>
+  <bottom>
+    <HBox id="footer-section">
+      <children>
+        <Label text="Copyright 2020 Chaise Ballotti"></Label>
+      </children>
+    </HBox>
+  </bottom>
+</BorderPane>
