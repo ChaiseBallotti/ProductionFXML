@@ -1,66 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
-
-
-<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import java.net.URL?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-  prefHeight="275.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1"
-  xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" stylesheets="@Steel.css">
-  <top>
-    <VBox styleClass="sidebar-section">
-      <children>
-        <TabPane>
-          <Tab fx:id="productLine" text="Product Line">
-            <!--<fx:include source="ProductLine.fxml"/>-->
-          </Tab>
-          <Tab fx:id="produce" text="Produce">
-            <!--<fx:include source="Produce.fxml"/>-->
-          </Tab>
-          <Tab fx:id="productionLog" text="Production Log">
-            <!--<fx:include source="ProductionLog.fxml"/>-->
-          </Tab>
-        </TabPane>
-      </children>
-    </VBox>
-  </top>
-  <left>
-  </left>
-  <center>
-    <VBox styleClass="content-section">
-      <children>
-        <Label id="content-header" text="Content header"></Label>
-        <Label id="content">
-          <text>
-            Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting, remaining
-            essentially unchanged. It was popularised in the 1960s with
-            the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software
-            like Aldus PageMaker including versions of Lorem Ipsum.
-          </text>
-        </Label>
-      </children>
-    </VBox>
-  </center>
-  <bottom>
-    <HBox id="footer-section">
-      <children>
-        <Label text="Copyright 2020 Chaise Ballotti"></Label>
-      </children>
-    </HBox>
-  </bottom>
-</BorderPane>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <tabs>
+    <Tab text="Product Line">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane layoutX="27.0" layoutY="64.0" prefHeight="119.0" prefWidth="261.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="44.000013732910155" minHeight="6.399999999999999" prefHeight="31.19998779296875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="54.4" minHeight="10.0" prefHeight="29.60001220703125" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                <Label text="Product Name" />
+                <TextField GridPane.columnIndex="1" />
+                <Label text="Manufacturer" GridPane.rowIndex="1" />
+                <Label text="Item Type" GridPane.rowIndex="2" />
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              </children>
+            </GridPane>
+            <Button fx:id="addProductButton" layoutX="116.0" layoutY="261.0" mnemonicParsing="false" onAction="#testOut" text="Add Product" />
+            <TableView layoutX="338.0" layoutY="84.0" prefHeight="265.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <Label layoutX="393.0" layoutY="46.0" text="Existing Products" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Produce">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <ListView layoutX="39.0" layoutY="42.0" prefHeight="239.0" prefWidth="242.0" />
+            <Label layoutX="118.0" layoutY="14.0" text="Choose Product" />
+            <Label layoutX="39.0" layoutY="313.0" text="Choose Quantity" />
+            <ComboBox layoutX="160.0" layoutY="309.0" prefHeight="26.0" prefWidth="121.0" />
+            <Button fx:id="recordProductionButton" layoutX="387.0" layoutY="309.0" mnemonicParsing="false" onAction="#testOut" text="Record Production" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Production Log">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TextArea layoutX="74.0" layoutY="33.0" prefHeight="302.0" prefWidth="450.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
