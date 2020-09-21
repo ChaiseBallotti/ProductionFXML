@@ -4,6 +4,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/*
+ * Sets the scene for the GUI.
+ * @author Chaise Ballotti
+ */
+
 public class Main extends Application {
 
   public static void main(String[] args) {
@@ -14,7 +19,7 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-    Scene scene = new Scene(root, 800, 500);
+    Scene scene = new Scene(root, 600, 400);
     primaryStage.setTitle("Vinson Dynamics");
     primaryStage.setScene(scene);
     primaryStage.show();
