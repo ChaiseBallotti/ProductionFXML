@@ -49,13 +49,16 @@ public class Controller {
 
   // Information that is needed to set the scene before the user interacts with the GUI.
   public void initialize(){
-    itemType.getItems().add("AUDIO");
-
     for(int i = 1; i <= 10; i++){
       addQuantity.getItems().add(Integer.toString(i));
     }
     addQuantity.setEditable(true);
     addQuantity.getSelectionModel().selectFirst();
+
+    for(ItemType item : ItemType.values()){
+      itemType.getItems().add(item.getCode());
+    }
+    itemType.getSelectionModel().selectFirst();
   }
 
   // Connecting to database. Query and updates need to be moved in next iteration.
