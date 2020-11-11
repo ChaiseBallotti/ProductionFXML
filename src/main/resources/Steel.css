@@ -1,8 +1,17 @@
 .tab-pane{
-  -fx-background-color: steelblue;
+  -fx-background-color: #EDDBF4;
+}
+
+#itemTypeBox {
+  -fx-background-color: #A86CC1;
+}
+
+#RecordProductButton{
+  -fx-background-color: #A86CC1;
+  -fx-font-size: 20px;
 }
 
 #addProductButton {
-  -fx-background-color: steelblue;
+  -fx-background-color: #A86CC1;
   -fx-font-size: 20px;
 }

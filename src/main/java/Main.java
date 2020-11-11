@@ -19,7 +19,7 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-    Scene scene = new Scene(root, 600, 400);
+    Scene scene = new Scene(root, 800, 600);
     primaryStage.setTitle("Vinson Dynamics");
     primaryStage.setScene(scene);
     primaryStage.show();

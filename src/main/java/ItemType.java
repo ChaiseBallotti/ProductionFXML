@@ -6,11 +6,12 @@ public enum ItemType {
 
   private final String CODE;
 
-  ItemType(String CODE) {
-    this.CODE = CODE;
+  ItemType(String itemCode) {
+    this.CODE = itemCode;
   }
 
   public String getCode() {
     return CODE;
   }
+
 }

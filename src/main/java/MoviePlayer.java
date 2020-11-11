@@ -10,6 +10,10 @@ public class MoviePlayer extends Product implements MultimediaControl {
     this.monitorType = productMonitor.getPANEL();
   }
 
+  MoviePlayer(String name, String manufacturer, ItemType type) {
+    super(0, name, manufacturer, type);
+  }
+
   @Override
   public void play() {
     System.out.println("Playing movie");

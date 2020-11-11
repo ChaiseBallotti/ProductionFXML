@@ -5,11 +5,11 @@ public abstract class Product implements Item {
   String manufacturer;
   String name;
 
-  Product(int id, ItemType type, String manufacturer, String name) {
+  Product(int id, String productName, String manufacturer, ItemType type) {
     this.id = id;
     this.type = type;
     this.manufacturer = manufacturer;
-    this.name = name;
+    this.name = productName;
   }
 
   Product(String name, String manufacturer, ItemType type) {
@@ -23,8 +23,14 @@ public abstract class Product implements Item {
     this.manufacturer = manufacturer;
   }
 
+  @Override
   public int getId() {
     return id;
+  }
+
+  @Override
+  public void setId(int productId) {
+    id = productId;
   }
 
   @Override
@@ -35,6 +41,14 @@ public abstract class Product implements Item {
   @Override
   public String getName() {
     return name;
+  }
+
+  public void setType(ItemType productType) {
+    type = productType;
+  }
+
+  public ItemType getType() {
+    return type;
   }
 
   @Override
@@ -51,3 +65,18 @@ public abstract class Product implements Item {
     return String.format("Name: %s%nManufacturer: %s%nType: %s", name, manufacturer, type);
   }
 }
+
+/*
+class Widget extends Product implements Item {
+
+  Widget(String name, String manufacturer, ItemType type) {
+    super(name, manufacturer, type);
+  }
+
+  @Override
+  public String toString() {
+    return String
+        .format("Name: %s\nManufacturer: %s\nType: %s", name, manufacturer, type.getCode());
+  }
+}
+*/
